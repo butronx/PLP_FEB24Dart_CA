@@ -1,0 +1,87 @@
+
+
+// 1. An object-oriented model that uses classes and inheritance:
+
+class Animal {
+  String name;
+
+  Animal(this.name);
+
+  void speak() {
+    print('Animal speaks');
+  }
+}
+
+class Dog extends Animal {
+  Dog(String name) : super(name);
+
+  @override
+  void speak() {
+    print('Dog barks');
+  }
+}
+
+
+
+// 2. A class that implements an interface:
+
+abstract class Shape {
+  double area();
+}
+
+class Circle implements Shape {
+  double radius;
+
+  Circle(this.radius);
+
+  @override
+  double area() {
+    return 3.14 * radius * radius;
+  }
+}
+
+
+
+// 3. A class that overrides an inherited method:
+
+class Animal {
+  void makeSound() {
+    print('Animal makes a sound');
+  }
+}
+
+class Cat extends Animal {
+  @override
+  void makeSound() {
+    print('Cat meows');
+  }
+}
+
+
+
+// 4. An instance of a class that is initialized with data from a file:
+
+class Person {
+  String name;
+  int age;
+
+  Person(this.name, this.age);
+
+  factory Person.fromJson(Map<String, dynamic> json) {
+    return Person(json['name'], json['age']);
+  }
+}
+
+
+
+// 5. A method that demonstrates the use of a loop:
+
+void printNumbers() {
+  for (int i = 0; i < 5; i++) {
+    print(i);
+  }
+}
+
+
+
+
